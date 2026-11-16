@@ -20,9 +20,9 @@ repo_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 if repo_root not in sys.path:
     sys.path.insert(0, repo_root)
 
-from project.src.simulator import BouncingBallSimulator, SimulationConfig
-from project.src.experiments import run_all_experiments
-from project.src.visualization import generate_validation_plots
+from src.simulator import BouncingBallSimulator, SimulationConfig
+from src.experiments import run_all_experiments
+from src.visualization import generate_validation_plots
 
 
 def main():
