@@ -1,7 +1,7 @@
 # Simulation & Modeling Technical Report: Bouncing Ball Simulator (V4.0)
 
 **Course:** CSE 413: Simulation & Modeling Lab  
-**Student:** Md. Fahad Rahman (ID: 0432320005101071, Section B1)  
+**Student:** Zannatul Nayeem (ID: 0432320005101063, Section B1)  
 **Instructor:** Audity Ghosh, Lecturer, Department of CSE, UITS  
 **Specification Version:** V4.0 Final Consolidated  
 
