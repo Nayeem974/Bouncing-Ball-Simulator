@@ -1,4 +1,4 @@
-# Bouncing Ball Simulator
+# Bouncing Ball Simulator (V4.0)
 
 A physics-based discrete-time numerical simulation of a bouncing ball using semi-implicit Euler integration, sub-timestep Time-of-Impact (TOI) collision detection, coefficient of restitution energy loss, resting contact mechanics, and decoupled rendering.
 
