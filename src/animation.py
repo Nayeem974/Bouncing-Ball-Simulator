@@ -18,7 +18,7 @@ import matplotlib.animation as animation
 from matplotlib.patches import Circle
 import numpy as np
 
-from project.src.simulator import BouncingBallSimulator, SimulationConfig
+from src.simulator import BouncingBallSimulator, SimulationConfig
 
 
 def run_live_animation(height: float = 10.0, restitution: float = 0.75, dt: float = 0.005):
