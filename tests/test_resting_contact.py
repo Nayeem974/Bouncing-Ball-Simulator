@@ -1,7 +1,7 @@
 """Tests for Resting and Grazing Contact handling (Section 4)."""
 
 import pytest
-from project.src.simulator import BouncingBallSimulator, SimulationConfig
+from src.simulator import BouncingBallSimulator, SimulationConfig
 
 
 def test_resting_contact_settling_and_zero_velocity():

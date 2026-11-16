@@ -3,7 +3,7 @@
 import os
 import pandas as pd
 import pytest
-from project.src.experiments import (
+from src.experiments import (
     run_dt_sensitivity_experiment,
     run_height_experiment,
     run_restitution_experiment,

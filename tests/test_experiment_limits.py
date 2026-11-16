@@ -2,8 +2,8 @@
 
 import os
 import pytest
-from project.src.experiments import run_single_simulation
-from project.src.simulator import BouncingBallSimulator, SimulationConfig
+from src.experiments import run_single_simulation
+from src.simulator import BouncingBallSimulator, SimulationConfig
 
 
 def test_30_second_limit_unsettled_elastic():

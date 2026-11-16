@@ -2,8 +2,8 @@
 
 import math
 import pytest
-from project.src.physics import calculate_analytical_first_impact_time, find_time_of_impact
-from project.src.simulator import BouncingBallSimulator, SimulationConfig
+from src.physics import calculate_analytical_first_impact_time, find_time_of_impact
+from src.simulator import BouncingBallSimulator, SimulationConfig
 
 
 def test_analytical_impact_time_formula():

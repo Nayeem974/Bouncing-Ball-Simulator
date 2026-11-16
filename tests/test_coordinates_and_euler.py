@@ -1,8 +1,8 @@
 """Comprehensive tests for Coordinate System and Semi-Implicit Euler equations (Sections 1 & 2)."""
 
 import pytest
-from project.src.physics import semi_implicit_euler_step
-from project.src.simulator import BouncingBallSimulator, SimulationConfig
+from src.physics import semi_implicit_euler_step
+from src.simulator import BouncingBallSimulator, SimulationConfig
 
 
 def test_upward_positive_coordinate_convention():

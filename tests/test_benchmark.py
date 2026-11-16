@@ -6,7 +6,7 @@ and records execution wall-clock time and speedup factor.
 
 import time
 import pytest
-from project.src.simulator import BouncingBallSimulator, SimulationConfig
+from src.simulator import BouncingBallSimulator, SimulationConfig
 
 
 def benchmark_30s_simulation(dt: float = 0.002, restitution: float = 1.0) -> dict:

@@ -56,7 +56,7 @@ project/
 ## 3. Deep-Dive Code Walkthrough
 
 ### A. Coordinate System
-**File:** [`project/src/physics.py`](file:///D:/sim/CSE-413-Simulation-Modeling-Lab/project/src/physics.py) and [`project/src/simulator.py`](file:///D:/sim/CSE-413-Simulation-Modeling-Lab/project/src/simulator.py)
+**File:** [`src.physics.py`](file:///D:/sim/CSE-413-Simulation-Modeling-Lab/src.physics.py) and [`src.simulator.py`](file:///D:/sim/CSE-413-Simulation-Modeling-Lab/src.simulator.py)
 
 * **Ground Level:** $y = 0$
 * **Ball Surface Contact:** The center of the ball touches the ground when its center reaches $y = \text{radius}$.
@@ -72,7 +72,7 @@ Potential energy is simply $PE = m \cdot g \cdot (y - \text{radius})$, which is 
 ---
 
 ### B. Semi-Implicit Euler Integration
-**Function:** `semi_implicit_euler_step(y, v, g, dt)` in [`physics.py`](file:///D:/sim/CSE-413-Simulation-Modeling-Lab/project/src/physics.py#L22-L38)
+**Function:** `semi_implicit_euler_step(y, v, g, dt)` in [`physics.py`](file:///D:/sim/CSE-413-Simulation-Modeling-Lab/src.physics.py#L22-L38)
 
 ```python
 def semi_implicit_euler_step(y, v, g, dt):
@@ -89,7 +89,7 @@ def semi_implicit_euler_step(y, v, g, dt):
 ---
 
 ### C. Collision Detection: Time-of-Impact (TOI)
-**Function:** `find_time_of_impact(y, v, radius, g, dt)` in [`physics.py`](file:///D:/sim/CSE-413-Simulation-Modeling-Lab/project/src/physics.py#L41-L93)
+**Function:** `find_time_of_impact(y, v, radius, g, dt)` in [`physics.py`](file:///D:/sim/CSE-413-Simulation-Modeling-Lab/src.physics.py#L41-L93)
 
 #### The Problem:
 If $dt = 0.01$s, the ball might be at $y = 0.15$m at $t$, and by $t + dt$ it would end up at $y = 0.03$m (tunneling into the floor). Simply reversing the velocity at $t+dt$ causes artificial energy errors and incorrect bounce heights.
@@ -125,7 +125,7 @@ $$t^* = \frac{v + \sqrt{v^2 + 2g(y - \text{radius})}}{g}$$
 ---
 
 ### D. Restitution, Energy Dissipation & Resting State
-**File:** [`simulator.py`](file:///D:/sim/CSE-413-Simulation-Modeling-Lab/project/src/simulator.py#L170-L215)
+**File:** [`simulator.py`](file:///D:/sim/CSE-413-Simulation-Modeling-Lab/src.simulator.py#L170-L215)
 
 #### Energy Equations:
 1. **Potential Energy:** $PE = m \cdot g \cdot (y - \text{radius})$
@@ -149,7 +149,7 @@ $$|v_{\text{impact}}| < v_{\text{settle}} \quad \text{and} \quad y \approx \text
 ---
 
 ### E. Preventing the Zeno Paradox (Event-Cap Safeguard)
-**File:** [`simulator.py`](file:///D:/sim/CSE-413-Simulation-Modeling-Lab/project/src/simulator.py#L145-L160)
+**File:** [`simulator.py`](file:///D:/sim/CSE-413-Simulation-Modeling-Lab/src.simulator.py#L145-L160)
 
 If a user configures a very low restitution and large $dt$, dozens of microscopic bounces can occur inside a single $dt$.
 We enforce an **event cap**: `max_sub_events_per_step = 15`.  

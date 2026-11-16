@@ -2,7 +2,7 @@
 
 import time
 import pytest
-from project.src.simulator import BouncingBallSimulator, SimulationConfig
+from src.simulator import BouncingBallSimulator, SimulationConfig
 
 
 def test_pathological_collision_does_not_hang():

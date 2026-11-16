@@ -7,7 +7,7 @@ results for identical simulation durations when using fixed physics timestep int
 
 import math
 import pytest
-from project.src.simulator import BouncingBallSimulator, SimulationConfig
+from src.simulator import BouncingBallSimulator, SimulationConfig
 
 
 def run_sim_with_render_fps(fps: float, total_duration: float, physics_dt: float = 0.002):

@@ -1,8 +1,8 @@
 """Tests for Energy Accounting and Conservation Budget (Section 5)."""
 
 import pytest
-from project.src.physics import calculate_collision_energy_loss, calculate_mechanical_energy
-from project.src.simulator import BouncingBallSimulator, SimulationConfig
+from src.physics import calculate_collision_energy_loss, calculate_mechanical_energy
+from src.simulator import BouncingBallSimulator, SimulationConfig
 
 
 def test_energy_formulas():
